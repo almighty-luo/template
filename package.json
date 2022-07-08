@@ -17,6 +17,12 @@
     <%_ if (axios) { _%>
     "axios": "^0.27.2",
     <%_ } _%>
+    <%_ if (axios) { _%>
+    "vuex": "*",
+    <%_ } _%>
+    <%_ if (axios) { _%>
+    "eslink": "*",
+    <%_ } _%>
     "vue": "^2.6.0"
   },
   "devDependencies": {
