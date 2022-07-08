@@ -14,9 +14,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    <_% if (axios) { _%>
+    <% if (axios) { %>
     "axios": "^0.27.2",
-    <_% } _%>
+    <% } %>
     "vue": "^2.6.0"
   },
   "devDependencies": {
