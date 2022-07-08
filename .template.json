@@ -1,0 +1,4 @@
+{
+  "data": ["axios", "vuex", "eslink"],
+  "delete": ["package-lock.json", ".template.json", "test"]
+}  
