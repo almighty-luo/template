@@ -14,15 +14,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    <%- if (axios) { -%>
+    <%_ if (axios) { _%>
     "axios": "^0.27.2",
-    <%-_ } _-%>
-    <%- if (vuex) {-%>
-      "vuex": "*",
-    <%- } -%>
-    <%- if (eslink) {-%>
-      "eslink": "*",
-    <%- } -%>
+    <%_ } _%>
+    <%_ if (vuex) { _%>
+    "vuex": "*",
+    <%_ } _%>
+    <%_ if (eslink) { _%>
+    "eslink": "*",
+    <%_ } _%>
     "vue": "^2.6.0"
   },
   "devDependencies": {
