@@ -1,7 +1,6 @@
 const { VueLoaderPlugin } = require('vue-loader')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const ESLintPlugin = require('eslint-webpack-plugin')
 const { DefinePlugin } = require('webpack')
 const { resolve } = require('path')
 const fs = require('fs-extra')
@@ -19,14 +18,11 @@ module.exports = {
         asyncChunks: true,
         filename: 'js/[name].[contenthash].js'
     },
+    devtool: 'source-map',
     resolve: {
         alias: {
             "@": resolve(process.cwd(), 'src')
         }
-    },
-    devServer: {
-        port: 8080,
-        hot: true
     },
     module: {
         rules: [
@@ -96,11 +92,6 @@ module.exports = {
                 }
             ]
         }),
-        new DefinePlugin(definePluginData),
-        new ESLintPlugin({
-            fix: true,
-            extensions: ['js', 'json', 'coffee'],
-            exclude: '/node_modules/'
-        })
+        new DefinePlugin(definePluginData)
     ]
 }
